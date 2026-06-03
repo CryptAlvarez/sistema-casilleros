@@ -1200,15 +1200,8 @@ for i, fila in df_pagina.iterrows():
 st.write(
     f"Página {pagina} de {total_paginas}"
 )
+st.divider()
 
-st.markdown("---")
-
-st.markdown(
-    """
-    <div style='text-align: center; color: #808080; font-size: 12px;'>
-    © 2026 Erik Alvarez | Sistema de Gestión de Casilleros<br>
-    Todos los derechos reservados.
-    </div>
-    """,
-    unsafe_allow_html=True
+st.caption(
+    "© 2026 Erik Alvarez | Sistema de Gestión de Casilleros | Todos los derechos reservados."
 )

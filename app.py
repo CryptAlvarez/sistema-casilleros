@@ -197,6 +197,50 @@ mantenimiento = len([
 ])
 
 # =====================================
+# DASHBOARD HOMBRES
+# =====================================
+
+h_disponibles = len([
+    c for c in casilleros
+    if c["zona"] == "hombres"
+    and c["estado"] == "disponible"
+])
+
+h_ocupados = len([
+    c for c in casilleros
+    if c["zona"] == "hombres"
+    and c["estado"] == "ocupado"
+])
+
+h_mantenimiento = len([
+    c for c in casilleros
+    if c["zona"] == "hombres"
+    and c["estado"] == "mantenimiento"
+])
+
+# =====================================
+# DASHBOARD MUJERES
+# =====================================
+
+m_disponibles = len([
+    c for c in casilleros
+    if c["zona"] == "mujeres"
+    and c["estado"] == "disponible"
+])
+
+m_ocupados = len([
+    c for c in casilleros
+    if c["zona"] == "mujeres"
+    and c["estado"] == "ocupado"
+])
+
+m_mantenimiento = len([
+    c for c in casilleros
+    if c["zona"] == "mujeres"
+    and c["estado"] == "mantenimiento"
+])
+
+# =====================================
 # MÉTRICAS
 # =====================================
 
@@ -209,6 +253,43 @@ m2.metric("Disponibles", disponibles)
 m3.metric("Ocupados", ocupados)
 m4.metric("Mantenimiento", mantenimiento)
 
+st.subheader("Resumen Hombres")
+
+c1, c2, c3 = st.columns(3)
+
+c1.metric(
+    "Disponibles",
+    h_disponibles
+)
+
+c2.metric(
+    "Ocupados",
+    h_ocupados
+)
+
+c3.metric(
+    "Mantenimiento",
+    h_mantenimiento
+)
+
+st.subheader("Resumen Mujeres")
+
+c4, c5, c6 = st.columns(3)
+
+c4.metric(
+    "Disponibles",
+    m_disponibles
+)
+
+c5.metric(
+    "Ocupados",
+    m_ocupados
+)
+
+c6.metric(
+    "Mantenimiento",
+    m_mantenimiento
+)
 # =====================================
 # MODAL REGISTRO
 # =====================================

@@ -422,20 +422,7 @@ def modal_registro():
         "Guardar Registro",
         use_container_width=True
     ):
-        if not nombre.strip():
-
-            st.error(
-                "Debe ingresar el nombre del empleado"
-            )
-
-            return
-        if len(nombre.strip()) < 5:
-
-            st.error(
-                "Ingrese un nombre válido"
-            )
-
-            return
+        
         if not cedula.isdigit():
 
             st.error(
@@ -448,6 +435,20 @@ def modal_registro():
 
             st.error(
                 "La cédula debe tener exactamente 10 dígitos"
+            )
+
+            return
+        if not nombre.strip():
+
+            st.error(
+                "Debe ingresar el nombre del empleado"
+            )
+
+            return
+        if len(nombre.strip()) < 5:
+
+            st.error(
+                "Ingrese un nombre válido"
             )
 
             return

@@ -18,9 +18,9 @@ st.set_page_config(
 # SUPABASE
 # =====================================
 
-url = "https://uyjhuvoslmorkouxrxoo.supabase.co"
+url = "SUPABASE_URL"
 
-key = "sb_publishable_LoZahdyj9uEMkTaaodTejw_sZEzo3Zb"
+key = "SUPABASE_KEY"
 
 supabase = create_client(url, key)
 
